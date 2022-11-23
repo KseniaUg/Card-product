@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cld</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container wrap__container ">
+          <ul class="items tab-header wrap__list flex">
+            <li class="wrap__list-item">
+                <button aria-label="Первый шаг" class="btn tab-header__item js-tab-trigger active wrap__list-btn" data-tab="1">Горный велосипед</button>
+              </li>
+            <li class="wrap__list-item">
+                <button aria-label="Второй шаг" class="btn tab-header__item  js-tab-trigger wrap__list-btn" data-tab="2">Женский велосипед</button> 
+              </li>
+          </ul>
+          <div class="tabs-content">
+            <div class="wrap tab-content__item js-tab-content active" data-tab="1">
+              <div class="wrap__box flex">
+                <div class="wrap__box-inner"><img src="./img/mountain-min.jpg" alt="Фотография велосипеда" class="img wrap__box-img"></div>
+              <div class="wrap__box-content">
+                <h1 class="title wrap__box-title">Велосипед SCHWINN Traveler women 2022</h1>
+                <p class="paragraph wrap__box-text">Данный велосипед с колесами 26 дюймов хорошо подходит высоким подросткам. Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.</p>
+                <p class="paragraph wrap__box-text">Суммарный вес велосипеда был снижен до 16,9 кг, так как рама была изготовлена с учетом использования велосипеда подростками.</p>
+              </div>
+            </div>
+              <div class="wrap__feature wrap__container">
+                <h2 class="title wrap__feature-title">Характеристики</h2>
+                <div class="wrap__feature-box flex">
+                  <ol class="list wrap__feature-list">
+                    <li class="wrap__feature-item">Двойной обод</li>
+                    <li class="wrap__feature-item">Алюминиевый сплав</li>
+                  </ol>
+                  <ol class="list wrap__feature-list wrap__feature-list-one">
+                    <li class="wrap__feature-item" value="3">Колеса диаметром 26 дюймов</li>
+                    <li class="wrap__feature-item">Покрышки 26х1,95"</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="wrap__tag wrap__container">
+                <h2 class="title wrap__tag-title">Добавить характеристику</h2>
+                <div class="wrap__tag-content">
+                  <input type="text" value="" class="wrap__tag-input">
+                  <button class="btn wrap__btn wrap__tag-btn" disabled>Добавить</button>
+                </div>
+              </div>
+              <div class="wrap__choice wrap__container">
+                <button class="btn wrap__btn wrap__choice-btn wrap__choice-btn-active">Окей</button>
+                <button class="btn wrap__choice-btn wrap__choice-btn-remove">Отмена</button>
+              </div>
+            </div>
+            <div class="wrap tab-content__item js-tab-content" data-tab="2">
+              <div class="wrap__box flex">
+                <div class="wrap__box-inner"><img src="./img/Woman-min.jpg" alt="Фотография велосипеда" class="img wrap__box-img"></div>
+              <div class="wrap__box-content">
+                <h1 class="title wrap__box-title">Велосипед SCHWINN Traveler women 2022</h1>
+                <p class="paragraph wrap__box-text">Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без проблем его перемещать.</p>
+                <p class="paragraph wrap__box-text">На данном велосипеде имеется 7 скоростей с переключателями от Shimano, а жесткая вилка обеспечивает отличную управляемость. Подходит для катания по асфальтированным поверхностям.</p>
+              </div>
+            </div>
+              <div class="wrap__feature wrap__container">
+                <h2 class="title wrap__feature-title">Характеристики</h2>
+                <div class="wrap__feature-box flex">
+                  <ol class="list wrap__feature-list">
+                    <li class="wrap__feature-item">Стальная рама</li>
+                    <li class="wrap__feature-item">Жесткая вилка</li>
+                  </ol>
+                  <ol class="list wrap__feature-list wrap__feature-list-one">
+                    <li class="wrap__feature-item" value="3">Колеса диаметром 24 дюймов </li>
+                    <li class="wrap__feature-item">7 скоростей</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="wrap__tag wrap__container">
+                <h2 class="title wrap__tag-title">Добавить характеристику</h2>
+                <div class="wrap__tag-content">
+                  <input type="text" value="" class="wrap__tag-input">
+                  <button class="btn wrap__btn wrap__tag-btn">Добавить</button>
+                </div>
+              </div>
+              <div class="wrap__choice wrap__container">
+                <button class="btn wrap__btn wrap__choice-btn wrap__choice-btn-active">Окей</button>
+                <button class="btn wrap__choice-btn">Отмена</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $('.js-tab-trigger').click(function() {
+       var id = $(this).attr('data-tab'),
+           content = $('.js-tab-content[data-tab="'+ id +'"]');
+       
+       $('.js-tab-trigger.active').removeClass('active');
+       $(this).addClass('active');
+       
+       $('.js-tab-content.active').removeClass('active');
+       content.addClass('active');
+    });
+     </script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/feature.js"></script>
+</body>
+</html>
